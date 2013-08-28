@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 
 #   Git Random Repo Script  
 #   Author: Tieme van Veen 

@@ -5,7 +5,6 @@
 #   This script does the following: 
 
 #   === Create a test repo ===
-#   - Create a new folder 'testfolder'
 #   - Create a new git repo and store it in bare-git-repo.git (this normally takes place at github) 
 
 #   === Clone the repo, add some files ===
@@ -39,19 +38,18 @@
 #   - Removed a file, and add some Lorem Ipsum to 2 exsisting files
 #   - Commit
 
+#   === Conflict !! ===
+
 #   At this point user A created a conflict because:
 
 #   - He removed a file which was edited by user B
 #   - He edited 2 files which were also edited by user B. 
 
-mkdir testfolder
+mkdir bare-git-repo.git
 
-cd testfolder/
-  mkdir bare-git-repo.git
-
-  cd bare-git-repo.git
-    git init --bare
-    cd ..
+cd bare-git-repo.git
+  git init --bare
+  cd ..
 
 echo -e "\n\033[1;0;31m    Bare repo created in bare-git-repo.git \033[0m\n"
 
@@ -202,7 +200,6 @@ cd cloned-repo-A
   echo -e "\n\033[1;0;34m    git commit -am \"A4 - random1.txt, updated random files 2,3\" \033[0m\n"
 
   git commit -am "A4 - random1.txt, updated random files 2,3"
-
 
 
 

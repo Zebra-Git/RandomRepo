@@ -1,50 +1,50 @@
 # RandomRepo
 Run the script to create a random git repo with conflicts
 
-== Example ==
+## Example ##
 
 To practise along, [https://github.com/tiemevanveen/RandomRepo/archive/master.zip download this shell script], unzip it and run it with ./create-random-repo.sh
 
 The script does the following: 
 
-=== Create a test repo ===
-# Create a new git repo and store it in bare-git-repo.git (this normally takes place at github)
+### Create a test repo ###
+* Create a new git repo and store it in bare-git-repo.git (this normally takes place at github)
 
-=== Clone the repo, add some files ===
+### Clone the repo, add some files ###
 
 User A clones the repo, does some work, commits, pushes
 
-# Clone the repo to "cloned-repo-A"
-# Create 3 new files with some Lorem Ipsum
-# Commit
-# Create 2 new files with some Lorem Ipsum
-# Commit
-# Push
-# cd ..
+* Clone the repo to "cloned-repo-A"
+* Create 3 new files with some Lorem Ipsum
+* Commit
+* Create 2 new files with some Lorem Ipsum
+* Commit
+* Push
+* cd ..
 
-=== Clone the repo again, add and edit some files ===
+### Clone the repo again, add and edit some files ###
 
 User B clones the repo, does some work, commits, pushes...
 
-# Pull 
-# Clone the repo to "cloned-repo-B"
-# Add some Lorem Ipsum to 3 exsisting files
-# Commit
-# Create 2 new files with some Lorem Ipsum
-# Commit
-# Push
-# cd ..
+* Pull 
+* Clone the repo to "cloned-repo-B"
+* Add some Lorem Ipsum to 3 exsisting files
+* Commit
+* Create 2 new files with some Lorem Ipsum
+* Commit
+* Push
+* cd ..
 
-=== Move back to the first cloned repo and do some work ===
+### Move back to the first cloned repo and do some work ###
 
 ..... but In the mean time.. user A does some work.
 
-# Add some Lorem Ipsum to 3 exsisting files
-# Commit
-# Removed a file, and add some Lorem Ipsum to 2 exsisting files
-# Commit
+* Add some Lorem Ipsum to 3 exsisting files
+* Commit
+* Removed a file, and add some Lorem Ipsum to 2 exsisting files
+* Commit
 
-== Conflict! ==
+## Conflict! ##
 
 At this point the users created a conflict because:
 
@@ -98,9 +98,9 @@ Think about it: when a conflict occurs, two commits need to be merged into one r
 
 This status shows the changes from the commit's involved in the conflict.
 
-== Solving the conflict ==
+## Solving the conflict ##
 
-=== The deleted file ===
+### The deleted file ###
 
 The first one is easy, we have to tell git if we really want to delete random1.txt. (We chose to delete the file but user B changed the file in the meantime.) Use git add/rm here.
  
@@ -117,7 +117,7 @@ Lets keep the file since user's B new code might depend on it.
 
  git add random1.txt
 
-=== The mofified files ===
+### The mofified files ###
 
 The files are listed in the same section but a simple 'git add/rm' won't work here.
 
@@ -129,14 +129,14 @@ It might (a bit shortened) look like this:
   	Lorem ipsum dolor sit amet, .....
   	<<<<<<< HEAD
   	Lorem ipsum dolor sit amet, consectetur adipisicing elit, odio aliquam distinctio.....
-  	=======
+  	######=
   	Lorem ipsum dolor sit amet, consectetur adipisicing elit, animi aut libero, .....
   	>>>>>>> b0e5f7abc3c35e00dac9ed2f3b9454f5b14e349e
 
 We can now do different things to solve the merge. 
-# Manually fix the problem
-# Use the mergetool
-# Tell git which version we want to keep
+* Manually fix the problem
+* Use the mergetool
+* Tell git which version we want to keep
 
 Let's go for the last option for now and lets keep our version of random2.txt and choose user B his version of random3.txt
 
@@ -147,7 +147,7 @@ After this (or after fixing it with the mergetool or manually) we have to add th
 
  git add random2.txt random3.txt
 
-=== committing the merge ===
+### committing the merge ###
 
 If we now check the status we see all the changes from both original commits in the staged area. 
 

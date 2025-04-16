@@ -1,4 +1,5 @@
 # RandomRepo
+This is README fail
 Run the script to create a random git repo with conflicts
 
 ## Example ##

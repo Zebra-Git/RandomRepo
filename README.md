@@ -4,7 +4,7 @@ Run the script to create a random git repo with conflicts
 
 ## Example ##
 ## Esempio ##
-
+## Коммит1 ##
 To practise along, [https://github.com/tiemevanveen/RandomRepo/archive/master.zip download this shell script], unzip it and run it with ./create-random-repo.sh
 
 The script does the following: 

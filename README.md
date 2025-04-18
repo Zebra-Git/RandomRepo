@@ -3,6 +3,7 @@ This is README fail
 Run the script to create a random git repo with conflicts
 
 ## Example ##
+## Пример ##
 
 To practise along, [https://github.com/tiemevanveen/RandomRepo/archive/master.zip download this shell script], unzip it and run it with ./create-random-repo.sh
 
